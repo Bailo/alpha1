@@ -1,0 +1,9 @@
+<div class="center">
+	<h1>Welcome to the NEWS.COM</h1>
+  <h2> This is the news feed for the sample application. </h2>
+</div>
+
+  <% unless signed_in? %>    
+    <h4>To change/add the news you need to <%= link_to "sign up now!", signup_path %></h4>
+  <% end %>
+
