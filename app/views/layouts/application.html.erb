@@ -4,20 +4,33 @@
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_include_tag "application" %>
-    <%= javascript_include_tag "modernizr" %>
+
 
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>
   </head>
   <body>
+    <div id="modal">
+      <div id="heading">
+          About this date
+      </div>
+      <div id="content">
+        
+      </div>
+    </div>
+
     <%= render 'layouts/header' %>
     <div class="container">
       <% flash.each do |key,value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
       <%= yield %>
+
+
       <%= render 'layouts/footer' %>
 
     </div>
+
+   
   </body>
 </html>
